@@ -35,3 +35,16 @@ exOrAlternativo1 _ x = x -- o _ é uma variavel que voce não vai usar
 
 tresValoresIguais :: Int -> Int -> Int -> Bool
 tresValoresIguais x y z = (x==y) && (y==z)
+
+--Guardas
+{-
+f x y
+ | g1 = exp1
+ | g2 = exp2 --ele vai pro segundo se o primeiro for falso
+ | otherwhise = exp3
+-}
+
+max3int :: Int -> Int -> Int ->Int
+ | x >= y && y >= z = x
+ | y >= z           = y
+ | otherwise        = z
