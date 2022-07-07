@@ -28,3 +28,10 @@ exOrAlternativo0 True True = False
 exOrAlternativo0 True False = True
 exOrAlternativo0 False True = True
 exOrAlternativo0 False False = False
+
+exOrAlternativo1 :: Bool -> Bool -> Bool
+exOrAlternativo1 True x = not x
+exOrAlternativo1 _ x = x -- o _ é uma variavel que voce não vai usar
+
+tresValoresIguais :: Int -> Int -> Int -> Bool
+tresValoresIguais x y z = (x==y) && (y==z)
