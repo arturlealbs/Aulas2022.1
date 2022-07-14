@@ -71,8 +71,35 @@ funcRec param = caso recursivo
 fat :: Int -> Int
   fat x
   | x == 0 = 1
-  | x > 0 = x * fat(x-1)
+  | x > 0 = x * fat(x-1) -- (x-1) é a variante (o que torna possivel sair da recursao)
   
 fatCasPad :: Int -> Int 
 fatCasPad 0 = 1
 fatCasPad n = n * fatCasPad(n-1) --se botar um numero negativo dá ruim
+
+fib :: Integer -> Integer
+fib n
+  |n == 0 = 0
+  |n == 1 = 1
+  |n > 1  = fib(n-1) + fib(n-2)
+  
+resto :: Int -> Int
+resto m n
+  | m < n = m
+  | otherwise = resto (m-n) n
+
+--Recursão Mutua
+
+ehPar, ehImpar :: Int -> Bool
+
+ehImpar n
+  | n <= 0 False
+  | otherwise = ehPar (n-1)
+
+ehPar n
+  | n < 0 = False
+  | n == 0 = True
+  | otherwise = ehImpar (n-1)
+  
+--Tuplas
+
