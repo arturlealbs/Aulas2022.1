@@ -50,9 +50,17 @@ ehPar x = mod x 2
 todosPares :: [Int] -> [Int]
 todosPares l = [x | x <- l, ehPar x]
 
-tamLista :: [Int] -> Int
+tamListaInt :: [Int] -> Int
 tamLista [] = 0
 tamLista (x:xs) = 1 + tamLista xs -- (x:xs) é uma lista generica
-{-
 
--}
+tamListaBool :: [Bool] -> Int
+tamLista [] = 0
+tamLista (x:xs) = 1 + tamLista xs -- (x:xs) é uma lista generica
+
+
+
+--Polimorfismo
+tamLista :: [a] -> Int
+tamLista [] = 0
+tamLista (x:xs) = 1 + tamLista xs -- (x:xs) é uma lista generica
